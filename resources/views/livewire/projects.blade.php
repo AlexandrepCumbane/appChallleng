@@ -12,8 +12,8 @@
         @include('livewire.create')
     @endif
 
-            {{-- @foreach($projects as $project)
-              <div class="card display: flex" style="width: 18rem;">
+            @foreach($projects as $project)
+              <div class="card m-5 mx-auto display: flex " style="width: 18rem;">
                 <div class="card-body">
                   <h5 class="card-title">Project</h5>
                   <h6 class="card-subtitle mb-2 text-muted">{{ $project->name }}</h6>
@@ -21,5 +21,5 @@
 
                 </div>
               </div>
-            @endforeach --}}
+            @endforeach
 </div>

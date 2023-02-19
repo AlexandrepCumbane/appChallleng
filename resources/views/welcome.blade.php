@@ -14,7 +14,7 @@
                     <div class="card-header">
                         <h2>Project - Form</h2>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body ">
                         @if (session()->has('message'))
                             <div class="alert alert-success">
                                 {{ session('message') }}

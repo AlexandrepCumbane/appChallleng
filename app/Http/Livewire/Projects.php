@@ -38,8 +38,8 @@ class Projects extends Component
             'name' => 'required',
             'description' => 'required',
             'is_public' => 'required',
-            'parent_id' => 'required',
-            'author_id' => 'required',
+            'parent_id' => 'nullable',
+            'author_id' => 'nullable',
             'identifier' => 'required',
             'status' => 'nullable',
         ]);
