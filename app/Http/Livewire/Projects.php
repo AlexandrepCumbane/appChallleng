@@ -24,7 +24,6 @@ class Projects extends Component
     {
         $this->name = '';
         $this->description = '';
-        $this->homepage = '';
         $this->is_public = '';
         $this->parent_id = '';
         $this->author_id = '';
@@ -38,7 +37,6 @@ class Projects extends Component
         $validatedDate =  $this->validate([
             'name' => 'required',
             'description' => 'required',
-            'homepage' => 'required',
             'is_public' => 'required',
             'parent_id' => 'required',
             'author_id' => 'required',

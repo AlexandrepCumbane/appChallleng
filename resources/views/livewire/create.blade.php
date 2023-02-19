@@ -57,7 +57,7 @@
 <div>
     <form>
         <div class="form-group">
-            <label for="name">Name:</label>
+            <label for="name">Title:</label>
             <input type="text" wire:model="name" class="form-control" id="name">
             @error('name') <span class="text-danger">{{ $message }}</span>@enderror
         </div>
@@ -72,7 +72,7 @@
             @error('homepage') <span class="text-danger">{{ $message }}</span>@enderror
         </div>
         <div class="form-group">
-            <label for="is_public">Is Public:</label>
+            <label for="is_public">Publish:</label>
             <select wire:model="is_public" class="form-control" id="is_public">
                 <option value="">Select an option</option>
                 <option value="1">Yes</option>
@@ -81,7 +81,7 @@
             @error('is_public') <span class="text-danger">{{ $message }}</span>@enderror
         </div>
         <div class="form-group">
-            <label for="parent_id">Parent Project:</label>
+            <label for="parent_id">Associeted Project:</label>
             <select wire:model="parent_id" class="form-control" id="parent_id">
                 <option value="">Select an option</option>
                 @foreach($projects as $project)
@@ -100,11 +100,11 @@
             </select>
             @error('author_id') <span class="text-danger">{{ $message }}</span>@enderror
         </div>
-        <div class="form-group">
+        {{-- <div class="form-group">
             <label for="identifier">Identifier:</label>
             <input type="text" wire:model="identifier" class="form-control" id="identifier">
             @error('identifier') <span class="text-danger">{{ $message }}</span>@enderror
-        </div>
+        </div> --}}
         <div class="form-group">
             <label for="status">Status:</label>
             <select wire:model="status" class="form-control" id="status">
@@ -126,6 +126,5 @@
             @error('has_shared_budget') <span class="text-danger">{{ $message }}</span>@enderror
         </div>
         <button type="submit" wire:click.prevent="{{ $updateMode ? 'update' : 'store' }}" class="btn btn-primary">{{ $updateMode ? 'Update' : 'Save' }}</button>
-        <button type="button" wire:click="resetInputFields" class="btn btn-danger">Reset</button>
     </form>
 </div>
